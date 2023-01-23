@@ -9,7 +9,8 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAspect {
 
-    @Pointcut("@annotation(Log)")
+//    @Pointcut("@annotation(Log)")
+    @Pointcut("execution(* ir.bki.aspect.ShipmentService.shipStuff())")
     public void logPointcut(){
     }
 
